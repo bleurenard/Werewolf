@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'base.html' %}
+    <meta charset="UTF-8">
+    <title>{% block title %}Tutor{% endblock %}</title>
+{% block css %}
+    <link rel="stylesheet" href="/static/css/tutor.css">
+{% endblock %}
+</head>
+<body>
+{% block content %}
+    <div class="content">
+        <h2>{{ tutor.t_title }}</h2>
+        <h5 id="date">{{ tutor.date_added }}</h5>
+        <p>{{ tutor.t_content }}</p>
+    </div>
+{% endblock %}
+</body>
+</html>

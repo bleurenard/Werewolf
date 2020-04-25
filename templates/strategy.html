@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'base.html' %}
+    <meta charset="UTF-8">
+    <title>{% block title %}Strategy{% endblock %}</title>
+    {% block css %}
+        <link rel="stylesheet" href="/static/css/strategy.css">
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <div class="content">
+        <div class="header">
+            <h2>{{ strategy_added.s_title }}</h2>
+            <h5 id="date">{{ strategy_added.date_added }}</h5>
+            <span id="words">{{ strategy_added.s_words }} words</span>
+        </div>
+        <p>{{ strategy_added.s_content }}</p>
+    </div>
+    <div class="remark">
+        <h2>Remark</h2>
+        {% for remark in remarks %}
+            <div id="remark">
+                <label for="remark_content">{{ remark.r_name }}:</label>
+                <span id="remark_content">{{ remark.r_content }}</span>
+            </div>
+        {% endfor %}
+
+        <div id="remark">
+            <form action="." method="post">
+                {% csrf_token %}
+                <input name="remark" type="text">
+                <button>submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+</body>
+</html>

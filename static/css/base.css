@@ -1,0 +1,101 @@
+*{
+    margin: 0px;
+}
+
+.top{
+    background: url("/static/img/list-bg1.jpg") center top no-repeat;
+    height: 518px;
+    filter: alpha(opacity=70);
+}
+
+.cont{
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.head{
+    background-color: snow;
+    width: 55%;
+    height: 70px;
+    margin-left: 650px;
+    border-radius: 25px;
+}
+
+#logo{
+    height: 80px;
+    width: 172px;
+    float: left;
+}
+
+#nav_bar {
+    padding-top: 20px;
+    margin: 0 auto;
+    opacity: 0.7;
+}
+
+#nav_bar li{
+    float: left;
+    list-style-type: none;
+    margin-left: 10px;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 华文新魏;
+}
+
+#nav_bar a:link, a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+#nav_bar a:hover, a:active{
+    color: blueviolet;
+}
+
+#user_img{
+    position: relative;
+    bottom: 15px;
+    right: 20px;
+}
+
+#user_img img{
+    border-radius: 35px;
+    float: right;
+    width: 60px;
+    height: 60px;
+}
+
+#download{
+    width: 100px;
+    height: 50px;
+    margin-top: 14%;
+    margin-left: 60%;
+}
+
+.center{
+    background: url("../img/list-bg2.jpg") center top no-repeat;
+    height: 700px;
+}
+
+.footer{
+    background: url("/static/img/bg6.jpg") center top no-repeat;
+}
+
+.bottom{
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    opacity: 0.6;
+    /*margin-top: 150px;*/
+}
+
+#copyright{
+    color: darkgray;
+    font-size: 10px;
+    text-align: center;
+    position: relative;
+    top: 25px;
+}

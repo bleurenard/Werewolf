@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'base.html' %}
+    <meta charset="UTF-8">
+    <title>{% block title %}Tutor{% endblock %}</title>
+</head>
+<body>
+{% block css %}
+    <link rel="stylesheet" href="/static/css/tutors.css" type="text/css">
+{% endblock %}
+{% block content %}
+    <ul class="tutor-list">
+        <div id="tutor">
+            {% for tutor in tutors %}
+                <li>
+                    <a href={% url 'whokillsit:tutor' tutor.id %}>
+                        <div>
+                            <p id="title">{{ tutor.t_title }}</p>
+                            <p id="date">{{ tutor.date_added }}</p>
+                        </div>
+                    </a>
+                </li>
+            {% endfor %}
+        </div>
+    </ul>
+{% endblock %}
+</body>
+</html>

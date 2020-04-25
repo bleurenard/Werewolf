@@ -1,0 +1,23 @@
+.login{
+    margin: 70px auto;
+    width: 50%;
+}
+form h2{
+    padding-bottom: 15px;
+    border-bottom: blueviolet solid 1px;
+}
+
+form input{
+    margin: 10px auto;
+    border-bottom: gray solid 1px;
+}
+
+#create{
+    font-size: 16px;
+    float: right;
+    /*color: blue;*/
+}
+
+#create a:hover,a:active{
+    color: blueviolet;
+}

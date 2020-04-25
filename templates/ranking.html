@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'base.html' %}
+    <meta charset="UTF-8">
+    <title>{% block title %}Ranking{% endblock %}</title>
+</head>
+<body>
+{% block content %}
+    <div class="content">
+        <h2 id="title">排行榜</h2>
+        <table id="ranking">
+            <tr>
+                <th id="t1">User</th>
+                <th id="t1">Rank</th>
+                <th id="t2">No</th>
+            </tr>
+            {% for ranking in rankings %}
+                <tr>
+                    <td id="t1">{{ranking.r_user}}</td>
+                    <td id="t1">{{ranking.r_rank}}</td>
+                    <td id="t2">{{ranking.r_no}}</td>
+                </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="/static/css/ranking.css" type="text/css">
+{% endblock %}
+</body>
+</html>

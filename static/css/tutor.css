@@ -1,0 +1,12 @@
+.content{
+    width: 50%;
+    margin: 70px auto;
+    text-align: center;
+}
+
+#date{
+    color: darkgrey;
+    padding: 10px;
+    margin: 10px;
+    border-bottom: blueviolet solid 1px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Index{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/base.css" type="text/css">
+{#    <link rel="stylesheet" href="/static/css/reset.css">#}
+    {% block css %}
+
+    {% endblock %}
+</head>
+<body>
+<div class="top">
+    <div class="cont">
+        {# head #}
+        <div class="logo">
+            <a href={% url 'whokillsit:home' %}><img id="logo" src="/static/img/logo.png"></a>
+        </div>
+        <div class="head">
+            <div class="nav_bar">
+                <ul id="nav_bar">
+                    <li><a href={% url 'whokillsit:home' %}>首页</a></li>
+                    <li><a href={% url 'whokillsit:tutors' %}>新手教程</a></li>
+                    <li><a href="{% url 'whokillsit:strategies' %}">游戏攻略</a></li>
+                    <li><a href={% url 'whokillsit:ranking' %}>排行榜</a></li>
+                    <li><a href={% url 'whokillsit:about' %}>关于我们</a></li>
+                </ul>
+            </div>
+            <div class="user_img">
+                <a id="user_img" href="{% url 'whokillsit:login' %}"><img src="/static/img/bleurenard.jpg"></a>
+            </div>
+        </div>
+        <div class="body">
+            <button id="download" type="submit">Download</button>
+        </div>
+    </div>
+</div>
+
+<div class="center">
+    <div class="cont">
+        {% block content %}
+        {% endblock %}
+    </div>
+</div>
+
+<div class="footer">
+    {# foot #}
+    <div class="bottom">
+        <div id="copyright">
+            Copyright &copy; 20xx-20xx 狼人杀 whokillsit.com All Rights Reserved. 备案号：皖ICP备xxxxxxxx号
+        </div>
+    </div>
+</div>
+</body>
+</html>

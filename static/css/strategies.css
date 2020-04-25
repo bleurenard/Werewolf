@@ -1,0 +1,32 @@
+button{
+    margin-left: 25%;
+}
+
+.strategy{
+    width: 50%;
+    margin: 100px auto;
+}
+
+#strategy{
+    list-style-type: none;
+    margin-top: 50px;
+    padding-bottom: 15px;
+    border-bottom: blueviolet;
+    border-width: 1px;
+    border-bottom-style: dotted;
+}
+
+#strategy a:link, a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+#strategy a:hover, a:active{
+    color: blueviolet;
+}
+
+#date{
+    float: right;
+    position: relative;
+    top: -20px;
+}

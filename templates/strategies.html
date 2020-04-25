@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'base.html' %}
+    <meta charset="UTF-8">
+    <title>{% block title %}Strategy{% endblock %}</title>
+    {% block css %}
+        <link rel="stylesheet" href="/static/css/strategies.css">
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <a href="{% url 'whokillsit:add_strategy' %}">
+        <button>add strategy</button>
+    </a>
+
+    <ul class="strategy">
+        {% for strategy in strategies_added %}
+            <li id="strategy">
+                <a href={% url 'whokillsit:strategy' strategy.id %}>
+                    <div>
+                        <p id="title">{{ strategy.s_title }}</p>
+                        <p id="date">{{ strategy.date_added }}</p>
+                    </div>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+</body>
+</html>

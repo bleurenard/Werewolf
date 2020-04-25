@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'base.html' %}
+    <meta charset="UTF-8">
+    <title>{% block title %}Add Strategy{% endblock %}</title>
+    {% block css %}
+        <link rel="stylesheet" href="/static/css/add_strategy.css">
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <form action="{% url 'whokillsit:add_strategy' %}" method="post">
+    {% csrf_token %}
+        <div class="strategy">
+            <div class="title">
+                <label for="title">Title</label>
+                <input name="title" type="text" id="title">
+            </div>
+            <div class="content">
+                <label for="content">Content</label>
+                <br>
+                <textarea name="content" id="content" cols="30" rows="10"></textarea>
+            </div>
+            <button>Add</button>
+        </div>
+    </form>
+    <script type="text/javascript">
+        {{ alert }} ('{{ wrong }}')
+    </script>
+{% endblock %}
+</body>
+</html>

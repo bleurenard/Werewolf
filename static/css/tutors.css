@@ -1,0 +1,31 @@
+*{
+    margin: 0px;
+}
+
+#tutor{
+    width: 50%;
+    margin: 100px auto;
+}
+#tutor li{
+    list-style-type: none;
+    margin-top: 50px;
+    padding-bottom: 15px;
+    border-bottom: blueviolet;
+    border-width: 1px;
+    border-bottom-style: dotted;
+}
+
+#tutor a:link, a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+#tutor a:hover, a:active{
+    color: blueviolet;
+}
+
+#date{
+    float: right;
+    position: relative;
+    top: -20px;
+}
