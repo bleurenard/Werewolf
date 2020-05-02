@@ -162,18 +162,22 @@ def register(request):
 
 def mine(request):
     user_id = request.session.get('user_id')
-    user = UserInfo.objects.get(id=user_id)
-    person = PersonInfo.objects.get(person_id=user_id)
     data = {
-        'id': user.id,
-        'username': user.u_name,
-        'icon': MEDIA_KEY_PREFIX + user.u_img.url,
-        'response': user.u_response,
-        'fans': user.u_fans,
-        'name': person.p_name,
-        'age': person.p_age,
-        'sex': person.p_sex,
-        'tel': person.p_tel,
-        'intro': person.p_intro,
+
     }
+    if user_id:
+        user = UserInfo.objects.get(id=user_id)
+        person = PersonInfo.objects.get(person_id=user_id)
+        data = {
+            'id': user.id,
+            'username': user.u_name,
+            'icon': MEDIA_KEY_PREFIX + user.u_img.url,
+            'response': user.u_response,
+            'fans': user.u_fans,
+            'name': person.p_name,
+            'age': person.p_age,
+            'sex': person.p_sex,
+            'tel': person.p_tel,
+            'intro': person.p_intro,
+        }
     return render(request, 'mine.html', data)
